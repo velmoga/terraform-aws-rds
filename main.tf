@@ -64,7 +64,7 @@ resource "aws_db_subnet_group" "default" {
 }
 
 resource "aws_security_group" "default" {
-  name        = "${module.label.id}"
+  name        = "${module.label.id}-sg"
   description = "Allow inbound traffic from the security groups"
   vpc_id      = "${var.vpc_id}"
 
